@@ -18,10 +18,14 @@ export const metadata = {
   description: "Welcome to Hassnain Store – Discover amazing deals on fashion, gadgets, and more.",
   keywords: ["ecommerce", "shopping", "hassnain", "online store", "buy online", "pakistan shopping"],
   authors: [{ name: "Hassnain" }],
-  viewport: "width=device-width, initial-scale=1",
   icons: {
     icon: "/favicon.png",
   },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 
