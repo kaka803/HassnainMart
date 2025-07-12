@@ -16,7 +16,7 @@ export default function MyCenteredAlert({ title, description, type = "info", onC
   <div
     className={`w-full max-w-md rounded-xl shadow-lg p-6 border ${colorMap[type]} transition-all duration-300`}
   >
-    <Alert className="border-none p-0 bg-transparent text-inherit ">
+    <Alert className="border-none  p-0 bg-transparent text-inherit ">
       <div className="flex items-start justify-between gap-4 relative">
         {/* Icon + Content */}
         <div className="flex gap-3">
@@ -35,7 +35,7 @@ export default function MyCenteredAlert({ title, description, type = "info", onC
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="text-xl font-bold leading-none absolute right-[-394px] top-0 text-gray-600 hover:text-black transition"
+          className="text-xl font-bold leading-none absolute right-[-200px] md:right-[-394px] top-0 text-gray-600 hover:text-black transition"
         >
           &times;
         </button>

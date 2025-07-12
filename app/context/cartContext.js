@@ -40,13 +40,13 @@ useEffect(() => {
 
 
 
-const updateCartQuantity = async (userId, productId, newQuantity) => {
+const updateCartQuantity = async (userEmail, productId, newQuantity) => {
   try {
     const res = await fetch('/api/update', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        userId,
+        userEmail,
         productId,
         quantity: newQuantity
       }),
@@ -55,7 +55,7 @@ const updateCartQuantity = async (userId, productId, newQuantity) => {
     const data = await res.json();
 
     if (data.success) {
-      fetchCart(userId); 
+      fetchCart(userEmail); 
     } else {
       console.error("Update failed:", data.message);
     }

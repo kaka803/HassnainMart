@@ -64,7 +64,7 @@ export default function CartPage() {
     try {
       setCartLoading(true)
       for (let item of localCart) {
-        await updateCartQuantity(user.id, item.product._id, item.quantity);
+        await updateCartQuantity(user.email, item.product._id, item.quantity);
       }
       setCartChanged(false);
       setCartLoading(false)

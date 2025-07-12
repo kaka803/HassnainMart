@@ -5,12 +5,15 @@ import { Cart } from "@/models/cart";
 export async function PUT(req) {
   await connectDb();
 
-  const { userId, productId, quantity } = await req.json();   
+  const { userEmail, productId, quantity } = await req.json();   
+
+  console.log('cart data',userEmail, productId, quantity);
+  
 
   try {
     const updatedCart = await Cart.findOneAndUpdate(
       {
-        userId,               
+        userEmail,               
         productID: productId  
       },
       { $set: { quantity } }, 
